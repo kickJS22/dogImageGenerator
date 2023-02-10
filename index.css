@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,700&display=swap');
+
+body{
+    background-color: wheat;
+}
+h1{
+    font-family: 'DM Sans';
+    margin: 25px;
+    text-align: center;
+}
+
+#container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+.createdImg{
+    background-color: white;
+    margin: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    width: auto;
+    height: 650px;
+}
+
+h2{
+    font-family: 'DM Sans';
+    text-align: center;
+    animation-duration: 1.3s;
+    animation-name: scroolDown;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroolDown {
+    0%{
+     transform: translateY(-10px)   
+    }
+
+    50%{
+        transform:translateY(10px)
+    }
+
+    100%{
+        transform: translateY(-10px)  
+    }
+    
+}
