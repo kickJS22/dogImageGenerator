@@ -1,4 +1,4 @@
-let quantity = 2;
+let quantity = 8;
 
 function createImage(link){
     const img = document.createElement("img");
@@ -41,14 +41,19 @@ window.onscroll = () => {
 }
 
 function generateCheck (){
+    console.log(window.innerHeight + " offset:" + document.body.offsetHeight)
     let comparate = window.scrollY + window.innerHeight
     if ( comparate >= document.body.offsetHeight){
         setInterval(load(), 2000)
         
         
     } else if(window.innerHeight >= document.body.offsetHeight) {
-        setInterval(load(), 2000)
+
+        while(window.innerHeight >= document.body.offsetHeight) {
+            load()
+        }
+
     } else {
-        return undefined
+        return console.log(comparate)
     }
 }
